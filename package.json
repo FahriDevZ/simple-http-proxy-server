@@ -1,0 +1,26 @@
+{
+  "name": "node-http-proxy-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "build:docker": "docker build -t simple-http-proxy-server .",
+    "start:dev": "ts-node-dev src/main.ts",
+    "start": "node dist/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@types/debug": "^4.1.12",
+    "debug": "^4.3.4",
+    "dotenv": "^16.3.1",
+    "proxy": "^2.1.1"
+  }
+}
