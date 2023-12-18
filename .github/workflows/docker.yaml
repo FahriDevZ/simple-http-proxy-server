@@ -27,9 +27,8 @@ jobs:
           flavor: |
             latest=false
           tags: |
-            type=raw,value=latest,enable=${{ github.event_name == 'release' && github.event.action == 'published' && github.event.release.prerelease == false }}
+            type=raw,value=latest,enable={{is_default_branch}}
             type=ref,event=tag
-            type=ref,event=branch
 
       - name: Setup QEMU
         uses: docker/setup-qemu-action@v2
